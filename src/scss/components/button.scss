@@ -1,0 +1,17 @@
+@import '../settings/colors';
+@import '../settings/fonts';
+
+.button {
+  width: 250px;
+  height: 90px;
+  border: 0.75px solid $font-alt-color;
+  background-color: #ffffff;
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: $font-base;
+    font-size: 32px;
+    font-weight: 300;
+    color: $font-alt-color;
+  }
+}

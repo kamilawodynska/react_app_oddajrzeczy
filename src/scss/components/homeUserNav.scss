@@ -1,0 +1,11 @@
+@import '../settings/colors';
+@import '../settings/fonts';
+
+.user-nav {
+  height: 2.25rem;
+  font-family: $font-base;
+  color: $font-base-color;
+  .create-account {
+    border: 0.75px solid $border;
+  }
+}
