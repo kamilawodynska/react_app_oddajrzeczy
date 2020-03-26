@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Title from '../components/title';
+import Title from './Title';
 import '../scss/components/aboutUs.scss';
 
 import signature from '../assets/Signature.svg';
 
 const AboutUs = () => {
   return (
-    <section className='about-us'>
+    <section className='about-us' id='about-us'>
       <div className='about-us-container'>
         <div className='title-text'>
           <Title title='O nas' />

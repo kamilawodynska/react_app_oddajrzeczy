@@ -4,7 +4,7 @@ import '../scss/components/threeColumns.scss';
 
 const ThreeColumns = () => {
   return (
-    <section className='three-columns'>
+    <section className='three-columns' id='three-columns'>
       <div className='three-columns-container'>
         <div className='column'>
           <div className='number'>10</div>

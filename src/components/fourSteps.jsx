@@ -6,12 +6,12 @@ import icon1 from '../assets/Icon-1.svg';
 import icon2 from '../assets/Icon-2.svg';
 import icon3 from '../assets/Icon-3.svg';
 import icon4 from '../assets/Icon-4.svg';
-import Title from './title';
-import Button from './button';
+import Title from './Title';
+import Button from './Button';
 
 const FourSteps = () => {
   return (
-    <section className='four-steps'>
+    <section className='four-steps' id='four-steps'>
       <Title title='Wystarczą 4 proste kroki' />
       <div className='steps-container'>
         <div className='steps'>

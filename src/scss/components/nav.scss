@@ -1,0 +1,32 @@
+@import '../settings/colors';
+@import '../settings/fonts';
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding-top: 36px;
+  .user-menu {
+    .link {
+      font-size: 12px;
+    }
+  }
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .start {
+      border: 0.75px solid $font-alt-color;
+    }
+    .link {
+      padding: 9px 20px;
+      font-family: $font-base;
+
+      letter-spacing: 0;
+      color: $font-base-color;
+      text-decoration: none;
+    }
+    .create-account {
+      border: 0.75px solid $border;
+    }
+  }
+}

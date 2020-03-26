@@ -1,0 +1,22 @@
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  padding-top: 120px;
+  .main-title {
+    text-align: center;
+    white-space: pre-line;
+    line-height: 40px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .button {
+      margin: 30px 15px;
+      white-space: pre-line;
+    }
+  }
+}

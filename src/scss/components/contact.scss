@@ -1,0 +1,27 @@
+.contact-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url(../../assets/Background-Contact-Form.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #ffffffc9, $alpha: 0.7);
+  }
+  .contact-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+  }
+}

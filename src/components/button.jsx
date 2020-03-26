@@ -2,10 +2,10 @@ import React from 'react';
 
 import '../scss/components/button.scss';
 
-const Button = ({ text }) => {
+const Button = ({ text, href }) => {
   return (
     <button className='button'>
-      <a href='/logowanie'>{text}</a>
+      <a href={`/${href}`}>{text}</a>
     </button>
   );
 };
