@@ -1,0 +1,80 @@
+{
+  "fundations": [
+    {
+      "id": 1,
+      "name": "Fundacja “Dbam o Zdrowie”",
+      "goals": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "categories": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    },
+    {
+      "id": 2,
+      "name": "Fundacja “Dbam o Zdrowie”",
+      "goals": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "categories": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    },
+    {
+      "id": 3,
+      "name": "Fundacja “Dbam o Zdrowie”",
+      "goals": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "categories": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    },
+    {
+      "id": 4,
+      "name": "Fundacja “Dbam o Zdrowie”",
+      "goals": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "categories": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    }
+  ],
+  "organizations": [
+    {
+      "id": 1,
+      "name": "Organizacja “Dbam o Zdrowie”",
+      "goals": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "categories": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    },
+    {
+      "id": 2,
+      "name": "Organizacja “Dbam o Zdrowie”",
+      "goals": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "categories": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    },
+    {
+      "id": 3,
+      "name": "Organizacja “Dbam o Zdrowie”",
+      "goals": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "categories": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    },
+    {
+      "id": 4,
+      "name": "Organizacja “Dbam o Zdrowie”",
+      "goals": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "categories": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    }
+  ],
+  "collections": [
+    {
+      "id": 1,
+      "name": "Zbiórka “Dbam o Zdrowie”",
+      "goals": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "categories": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    },
+    {
+      "id": 2,
+      "name": "Zbiórka “Dbam o Zdrowie”",
+      "goals": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "categories": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    },
+    {
+      "id": 3,
+      "name": "Zbiórka “Dbam o Zdrowie”",
+      "goals": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "categories": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    },
+    {
+      "id": 4,
+      "name": "Zbiórka “Dbam o Zdrowie”",
+      "goals": "Pomoc osobom znajdującym się w trudnej sytuacji życiowej.",
+      "categories": "ubrania, jedzenie, sprzęt AGD, meble, zabawki"
+    }
+  ]
+}

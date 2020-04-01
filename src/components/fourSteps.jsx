@@ -41,7 +41,7 @@ const FourSteps = () => {
           </div>
         </div>
       </div>
-      <Button text='oddaj rzeczy'></Button>
+      <Button text='oddaj rzeczy' href='oddaj-rzeczy'></Button>
     </section>
   );
 };

@@ -1,0 +1,55 @@
+@import '../settings/colors';
+@import '../settings/fonts';
+
+.form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .success {
+    font-family: $font-base;
+    font-size: 14px;
+    font-weight: 700;
+    color: green;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .error {
+    font-family: $font-base;
+    font-size: 10px;
+    font-weight: 700;
+    color: red;
+  }
+  .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .label,
+  .textarea-label {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-base;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .label {
+    width: 45%;
+    padding: 40px 0;
+  }
+  .textarea-label {
+    width: 100%;
+  }
+  input,
+  textarea {
+    border: none;
+    border-bottom: 1px solid $background;
+    background-color: transparent;
+    font-family: $font-base;
+    placeholder {
+      color: $background;
+    }
+  }
+}

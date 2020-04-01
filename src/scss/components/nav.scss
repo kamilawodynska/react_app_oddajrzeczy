@@ -9,6 +9,9 @@
     .link {
       font-size: 12px;
     }
+    .give-away {
+      border: 1px solid $border;
+    }
   }
   .menu {
     display: flex;
@@ -20,10 +23,10 @@
     .link {
       padding: 9px 20px;
       font-family: $font-base;
-
       letter-spacing: 0;
       color: $font-base-color;
       text-decoration: none;
+      cursor: pointer;
     }
     .create-account {
       border: 0.75px solid $border;

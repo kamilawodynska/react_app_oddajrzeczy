@@ -1,27 +1,18 @@
 import React from 'react';
 
 import Title from './Title';
+import ContactForm from './ContactForm';
 import '../scss/components/contact.scss';
+import Footer from './Footer';
 
 const Contact = () => {
   return (
     <section className='contact-section' id='contact'>
-      <div className='contact-form'>
+      <div className='contact-form-container'>
         <Title title='Skontaktuj się z nami' />
-        <form className='form'>
-          <div className='row'>
-            <label className='label'>
-              Wpisz swoje imię
-              <input type='text' name='name' />
-            </label>
-            <label className='label'>
-              Wpisz swój email
-              <input type='email' name='name' />
-            </label>
-          </div>
-        </form>
+        <ContactForm />
       </div>
-      <footer className='footer'></footer>
+      <Footer/>
     </section>
   );
 };

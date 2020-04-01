@@ -1,21 +1,20 @@
-import React, { useCallback, useContext } from 'react';
-import { withRouter, Redirect } from 'react-router';
+import React, { useCallback } from 'react';
+import { withRouter } from 'react-router';
 import app from '../firebase/base';
-import { AuthContext } from '../firebase/Auth';
 
 import '../scss/components/login.scss';
 import Button from './Button';
 
-const LoginForm = ({ history }) => {
-  const handleLogin = useCallback(
+const SignUpForm = ({ history }) => {
+  const handleSignUp = useCallback(
     async event => {
       event.preventDefault();
       const { email, password } = event.target.elements;
       try {
         await app
           .auth()
-          .signInWithEmailAndPassword(email.value, password.value);
-        history.push('/oddaj-rzeczy');
+          .createUserWithEmailAndPassword(email.value, password.value);
+        history.push('/');
       } catch (error) {
         alert(error);
       }
@@ -23,14 +22,8 @@ const LoginForm = ({ history }) => {
     [history]
   );
 
-  const { currentUser } = useContext(AuthContext);
-
-  if (currentUser) {
-    return <Redirect to='/oddaj-rzeczy' />;
-  }
-
   return (
-    <form className='form' onSubmit={handleLogin}>
+    <form className='form' onSubmit={handleSignUp}>
       <div className='labels'>
         <label className='label'>
           Email
@@ -40,13 +33,17 @@ const LoginForm = ({ history }) => {
           Hasło
           <input name='password' type='password' />
         </label>
+        {/* <label className='label'>
+          Powtórz hasło
+          <input name='password' type='password' />
+        </label> */}
       </div>
       <div className='buttons-login-form'>
-        <Button text='Załóż konto' href='rejestracja' />
-        <Button text='Zaloguj się' href='oddaj-rzeczy' type='submit' />
+        <Button text='Zaloguj się' href='logowanie' />
+        <button type='submit'>Załóż konto</button>
       </div>
     </form>
   );
 };
 
-export default withRouter(LoginForm);
+export default withRouter(SignUpForm);
