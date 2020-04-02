@@ -1,37 +1,44 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { AuthContext } from '../firebase/Auth';
+import { AuthUserContext } from '../components/Session';
+import * as ROUTES from '../constants/routes';
+import SignOutButton from '../components/SignOut';
 
-const UserNav = () => {
-  const { currentUser } = useContext(AuthContext);
+import '../scss/components/nav.scss';
 
-  if (currentUser) {
-    return (
-      <ul className='menu user-menu'>
-        <Link className='link hello-user' to='/'>
-          Cześć!
-        </Link>
-        <Link className='link give-away' to='/oddaj-rzeczy'>
-          Oddaj rzeczy
-        </Link>
-        <Link className='link' to='/wylogowano'>
-          Wyloguj
-        </Link>
-      </ul>
-    );
-  }
+const UserNav = () => (
+  <AuthUserContext.Consumer>
+    {authUser =>
+      authUser ? <UserNavAuth authUser={authUser} /> : <UserNavNonAuth />
+    }
+  </AuthUserContext.Consumer>
+);
 
-  return (
-    <ul className='menu user-menu'>
-      <Link className='link' to='/logowanie'>
-        Zaloguj
-      </Link>
-      <Link className='link create-account' to='/rejestracja'>
-        Załóż konto
-      </Link>
-    </ul>
-  );
-};
+const UserNavAuth = ({ authUser }) => (
+  <ul className='menu user-menu'>
+    <Link className='link hello-user' to={ROUTES.HOME}>
+      Cześć {authUser.email}!
+    </Link>
+    <Link className='link give-away' to={ROUTES.GIVESTUFF}>
+      Oddaj rzeczy
+    </Link>
+    <SignOutButton />
+  </ul>
+);
+
+const UserNavNonAuth = () => (
+  <ul className='menu user-menu'>
+    <Link className='link' to={ROUTES.SIGN_IN}>
+      Zaloguj
+    </Link>
+    <Link className='link create-account' to={ROUTES.SIGN_UP}>
+      Załóż konto
+    </Link>
+    <Link className='link' to={ROUTES.HOME}>
+      Strona główna
+    </Link>
+  </ul>
+);
 
 export default UserNav;

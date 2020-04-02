@@ -20,17 +20,30 @@ class Help extends Component {
   };
 
   render() {
+    const { value } = this.state;
     return (
       <section className='help'>
         <Title title='Komu pomagamy?' />
         <ul className='who-help'>
-          <li className='item' id='fundations' onClick={this.setOpen}>
+          <li
+            className={`item ${value === 'fundations' && 'active'}`}
+            id='fundations'
+            onClick={this.setOpen}
+          >
             Fundacjom
           </li>
-          <li className='item' id='organizations' onClick={this.setOpen}>
+          <li
+            className={`item ${value === 'organizations' && 'active'}`}
+            id='organizations'
+            onClick={this.setOpen}
+          >
             Organizacjom pozarządowym
           </li>
-          <li className='item' id='collections' onClick={this.setOpen}>
+          <li
+            className={`item ${value === 'collections' && 'active'}`}
+            id='collections'
+            onClick={this.setOpen}
+          >
             Lokalnym zbiórkom
           </li>
         </ul>

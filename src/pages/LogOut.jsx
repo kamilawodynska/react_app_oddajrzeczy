@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import * as ROUTES from '../constants/routes';
 
-import Nav from '../components/Nav';
 import '../scss/components/logOut.scss';
 import Title from '../components/Title';
-import Button from '../components/Button';
 
 const LogOut = () => {
   return (
     <section className='log-out'>
-      <Nav />
       <div className='log-out-container'>
         <Title title={`Wylogowanie nastąpiło\n pomyślnie!`} />
-        <Button text='Strona główna' href=' ' />
+        <Link className='button' to={ROUTES.HOME}>
+          Strona główna
+        </Link>
       </div>
     </section>
   );

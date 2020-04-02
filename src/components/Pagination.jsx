@@ -1,7 +1,7 @@
 import React from 'react';
 import '../scss/components/pagination.scss';
 
-const Pagination = ({ fundsPerPage, totalFunds, paginate }) => {
+const Pagination = ({ fundsPerPage, totalFunds, paginate, currentPage }) => {
   const pageNumbers = [];
 
   for (let i = 1; i <= Math.ceil(totalFunds / fundsPerPage); i++) {
@@ -11,7 +11,10 @@ const Pagination = ({ fundsPerPage, totalFunds, paginate }) => {
   return (
     <ul className='pagination'>
       {pageNumbers.map(number => (
-        <li key={number} className='page-item'>
+        <li
+          key={number}
+          className={`page-item ${currentPage === number && 'active'}`}
+        >
           <div onClick={() => paginate(number)} className='page-link'>
             {number}
           </div>

@@ -6,6 +6,11 @@
   height: 90px;
   border: 0.75px solid $font-alt-color;
   background-color: #ffffff;
+  font-family: $font-base;
+  font-weight: 300;
+  color: $font-alt-color;
+  text-transform: uppercase;
+
   a {
     text-decoration: none;
     text-transform: uppercase;

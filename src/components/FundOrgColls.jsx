@@ -16,8 +16,9 @@ const FundOrgColls = ({ value }) => {
       })
       .then(fundations => {
         setFundations(fundations);
+        setCurrentPage(1);
       });
-  }, []);
+  }, [value]);
 
   const indexOfLastFund = currentPage * fundsPerPage;
   const indexOfFirstFund = indexOfLastFund - fundsPerPage;
@@ -42,6 +43,7 @@ const FundOrgColls = ({ value }) => {
         fundsPerPage={fundsPerPage}
         totalFunds={fundations.length}
         paginate={paginate}
+        currentPage={currentPage}
       />
     </section>
   );

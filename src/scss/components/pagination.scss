@@ -13,9 +13,6 @@
     border: 1px solid $background;
     text-align: center;
     margin: 1px;
-    &:active {
-      color: $border;
-    }
     cursor: pointer;
   }
 }

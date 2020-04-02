@@ -1,35 +1,32 @@
 @import '../settings/colors';
 @import '../settings/fonts';
 
-.nav {
+.user-menu {
   display: flex;
-  flex-direction: column;
-  padding-top: 36px;
-  .user-menu {
-    .link {
-      font-size: 12px;
-    }
-    .give-away {
-      border: 1px solid $border;
-    }
+  padding: 36px 55px 10px 0;
+  .link {
+    font-size: 12px;
   }
-  .menu {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    .start {
-      border: 0.75px solid $font-alt-color;
-    }
-    .link {
-      padding: 9px 20px;
-      font-family: $font-base;
-      letter-spacing: 0;
-      color: $font-base-color;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .create-account {
-      border: 0.75px solid $border;
-    }
+  .give-away {
+    border: 1px solid $border;
+  }
+}
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .start {
+    border: 0.75px solid $font-alt-color;
+  }
+  .link {
+    padding: 9px 20px;
+    font-family: $font-base;
+    letter-spacing: 0;
+    color: $font-base-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .create-account {
+    border: 0.75px solid $border;
   }
 }

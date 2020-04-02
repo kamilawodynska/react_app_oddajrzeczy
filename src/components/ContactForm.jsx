@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 import '../scss/components/contactForm.scss';
 
-import Button from './Button';
-
 class ContactForm extends Component {
   state = {
     name: '',
@@ -24,21 +22,21 @@ class ContactForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    this.validate();
-    if (this.validate()) {
-      const data = {
-        name: this.state.name,
-        email: this.state.email,
-        message: this.state.message
-      };
-      console.log(data);
-      fetch('https://fer-api.coderslab.pl/v1/portfolio/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      })
-        .then(response => response.json())
-        .then(data => {
+    if (!this.validate()) return;
+    const data = {
+      name: this.state.name,
+      email: this.state.email,
+      message: this.state.message
+    };
+    console.log(data);
+    fetch('https://fer-api.coderslab.pl/v1/portfolio/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === 'success') {
           console.log('Success:', data);
           this.setState({
             name: '',
@@ -46,11 +44,11 @@ class ContactForm extends Component {
             message: '',
             success: true
           });
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
-    }
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
   };
   validate = () => {
     let isValid = true;
